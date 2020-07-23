@@ -455,11 +455,9 @@ class HighResolutionNet(nn.Module):
         x3 = F.upsample(x[3], size=(x0_h, x0_w), mode='bilinear')
 
         x4 = torch.cat([x[0], x1, x2, x3], 1)
-
         x4 = self.last_layer(x4)
 
-        # return x
-        return [x[3], x[2], x[1], x4]
+        return x4
 
     def init_weights(self, pretrained='',):
         logger.info('=> init weights from normal distribution')
