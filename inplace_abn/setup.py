@@ -63,8 +63,8 @@ setuptools.setup(
     ],
 
     # Versioning
-    use_scm_version={"root": ".", "relative_to": __file__, "write_to": "inplace_abn/_version.py"},
-
+    # use_scm_version={"root": ".", "relative_to": __file__, "write_to": "inplace_abn/_version.py"},
+    version = "1.0",
     # Requirements
     setup_requires=["setuptools_scm"],
     python_requires=">=3, <4",
