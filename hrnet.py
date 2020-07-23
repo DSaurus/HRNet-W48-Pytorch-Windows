@@ -18,9 +18,9 @@ import torch
 import torch.nn as nn
 import torch._utils
 import torch.nn.functional as F
-from inplace_abn import ABN
+from inplace_abn import InPlaceABNSync
 
-BatchNorm2d = ABN
+BatchNorm2d = functools.partial(InPlaceABNSync, activation='none')
 BN_MOMENTUM = 0.01
 logger = logging.getLogger(__name__)
 
