@@ -1,4 +1,4 @@
-Pillow == 7.0.0
+Pillow == 9.0.0
 numpy == 1.18.1
 setuptools == 20.7.0
 tensorboardX == 2.0
